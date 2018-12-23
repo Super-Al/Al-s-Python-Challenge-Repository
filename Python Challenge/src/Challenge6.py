@@ -22,10 +22,12 @@ while True:
     fileref = zipref.open(number+".txt")
     data = fileref.read().decode("utf-8")
     
-    print(n,end="")
-    print(data)
+    """print(n,end="")
+    print(data)"""
     
-        
+    info = zipref.getinfo(number+".txt")
+    print(info.comment.decode("utf-8"),end="")
+            
     n = n+1
     
     fileref.close()
